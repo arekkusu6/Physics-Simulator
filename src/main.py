@@ -33,18 +33,15 @@ pygame.init()
 screen = pygame.display.set_mode((800,800))
 clock = pygame.time.Clock()
 space = pymunk.Space()
-space.gravity = (0, 200)
+space.gravity = (10, 300)
 coins = []
 
 blockers = []
 blockers.append(static_blocker(space, (500, 500)))
 blockers.append(static_blocker(space, (250, 400)))
-blockers.append(static_blocker(space, (280, 700)))
 blockers.append(static_blocker(space, (880, 600)))
 blockers.append(static_blocker(space, (280, 700)))
 blockers.append(static_blocker(space, (580, 300)))
-
-blockers.append(static_blocker(space, (450, 230)))
 
 while True:
     for event in pygame.event.get():
